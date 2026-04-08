@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetGhost</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-area">
+        <h1>NETGHOST</h1>
+        <p class="tagline">WiFi Privacy Shield</p>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <button id="guide-open" class="help-trigger" title="Panduan Penggunaan">?</button>
+        <div id="status-badge" class="badge">SECURED</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-monitor">
+        <div class="radar">
+          <div class="circle"></div>
+          <div class="pulse"></div>
+        </div>
+        <p id="shield-status">Stealth Mode Active</p>
+      </section>
+
+      <div class="controls">
+        <div class="control-item">
+          <div class="info">
+            <h3>Stealth Mode</h3>
+            <p>Auto-clean on tab close</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="stealth-toggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="control-item">
+          <div class="info">
+            <h3>Network Harden</h3>
+            <p>Block DNS leaks & WebRTC</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="harden-toggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="control-item">
+          <div class="info">
+            <h3>Proxy Tunnel</h3>
+            <p>Hide IP from WiFi Admin</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="proxy-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div id="proxy-config" class="config-panel hidden">
+        <input type="text" id="proxy-host" placeholder="Host (ex: proxy.com)">
+        <input type="number" id="proxy-port" placeholder="Port">
+        <button id="save-proxy" class="btn-primary">Apply Proxy</button>
+      </div>
+
+      <button id="panic-btn" class="btn-danger">PANIC: WIPE ALL DATA</button>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 NetGhost Privacy</p>
+    </footer>
+
+    <!-- Help Guide Overlay -->
+    <div id="guide-panel" class="guide-overlay">
+      <div class="guide-header">
+        <h2>PANDUAN PENGGUNAAN</h2>
+        <span id="guide-close" class="close-guide">&times;</span>
+      </div>
+      <div class="guide-content">
+        <h4>🛡️ Stealth Mode</h4>
+        <p>Menghapus jejak penjelajahan secara otomatis setiap kali Anda menutup tab atau jendela browser.</p>
+        <ul>
+          <li>History & Cache dibersihkan otomatis.</li>
+          <li>Cookie sesi dihapus untuk mencegah tracking.</li>
+        </ul>
+
+        <h4>🔒 Network Hardening</h4>
+        <p>Memperkuat pengaturan browser untuk mencegah kebocoran data identitas di jaringan publik.</p>
+        <ul>
+          <li>Mencegah kebocoran DNS (Domain Name System).</li>
+          <li>Mematikan WebRTC agar IP asli Anda tidak bocor.</li>
+        </ul>
+
+        <h4>🌐 Proxy Tunnel</h4>
+        <p>Mengalihkan lalu lintas data melalui server aman (SOCKS5). Admin WiFi hanya akan melihat lalu lintas terenkripsi ke server proxy.</p>
+        <ul>
+          <li>Gunakan Host & Port dari penyedia proxy terpercaya.</li>
+          <li>IP asli Anda akan disembunyikan sepenuhnya.</li>
+        </ul>
+
+        <h4>⚠️ Panic Button (Wipe All)</h4>
+        <p>Fitur darurat untuk menghapus SELURUH data browser seketika dan menutup semua tab yang aktif.</p>
+        <p><strong>Gunakan hanya saat situasi kritis!</strong></p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

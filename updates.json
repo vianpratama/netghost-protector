@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "netghost-protector-final@yoru-dev.id": {
+      "updates": [
+        {
+          "version": "1.0.5",
+          "update_link": "https://raw.githubusercontent.com/vianpratama/netghost-protector/main/netghost.xpi"
+        }
+      ]
+    }
+  }
+}
