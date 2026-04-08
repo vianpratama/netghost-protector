@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "NetGhost WiFi Protector",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Proteksi privasi WiFi dengan pembersihan riwayat otomatis dan pengerasan jaringan.",
   "author": "NetGhost Project",
-  "homepage_url": "https://github.com/vianpratama/netghost-protector",
+  "homepage_url": "https://github.com/reinoyoru/netghost-protector",
   "permissions": [
     "history",
     "browsingData",
@@ -14,7 +14,9 @@
     "proxy"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "action": {
     "default_popup": "popup.html",
@@ -35,11 +37,12 @@
       "strict_min_version": "109.0",
       "update_url": "https://raw.githubusercontent.com/vianpratama/netghost-protector/main/updates.json",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": [
+          "none"
+        ]
       }
     }
   },
-  "homepage_url": "https://github.com/reinoyoru/netghost-protector",
   "developer": {
     "name": "NetGhost Developer",
     "url": "https://github.com/netghost-privacy/shield"
